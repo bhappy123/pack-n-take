@@ -21,14 +21,14 @@ import {
 } from 'react-native-image-header-scroll-view';
 
 const ProductDetails = (props) => {
-  const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 70;
+  const MIN_HEIGHT = Platform.OS === 'ios' ? 120 : 80;
   const MAX_HEIGHT = 350;
   return (
     <>
       <ImageHeaderScrollView
         maxHeight={MAX_HEIGHT}
         minHeight={MIN_HEIGHT}
-        renderHeader={() => (
+        renderTouchableFixedForeground={() => (
           <View style={{width: '100%', height: 350}}>
             <ImageBackground source={WELCOME_IMG} style={styles.image}>
               <View
@@ -49,13 +49,13 @@ const ProductDetails = (props) => {
                     <Ionicons
                       onPress={() => props.navigation.goBack()}
                       name="chevron-back-circle"
-                      size={35}
+                      size={40}
                       color="white"></Ionicons>
                   </View>
                   <View>
                     <Image
                       source={LOGO}
-                      style={{borderRadius: 40, height: 33, width: 33}}
+                      style={{borderRadius: 40, height: 40, width: 40}}
                     />
                   </View>
                 </View>
