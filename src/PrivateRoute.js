@@ -31,7 +31,11 @@ const PrivateRoute = () => {
       }}>
       <Stack.Screen name="MainApp" component={MYTabs} />
       <Stack.Screen name="CategoryDetails" component={CategoryDetails} />
-      <Stack.Screen name="ProductDetails" component={ProductDetails} />
+      <Stack.Screen
+        name="ProductDetails"
+        component={ProductDetails}
+        options={{headerTransparent: true}}
+      />
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Orders" component={Orders} />
       <Stack.Screen name="ChangePassword" component={ChangePassword} />
